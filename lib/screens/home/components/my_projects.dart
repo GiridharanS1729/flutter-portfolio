@@ -21,15 +21,24 @@ class MyProjects extends StatelessWidget {
         ),
         const SizedBox(height: defaultPadding),
         Responsive(
-            mobile: ProjectsGridView(
-              crossAxisCount: 1,
-              childAspectRatio: 1.7,
-            ),
-            mobileLarge: ProjectsGridView(
-              crossAxisCount: 2,
-            ),
-            tablet: ProjectsGridView(childAspectRatio: .8),
-            desktop: ProjectsGridView())
+          mobile: ProjectsGridView(
+            crossAxisCount: 1,
+            childAspectRatio: 1.7,
+          ),
+          mobileLarge: ProjectsGridView(
+            crossAxisCount: 2,
+          ),
+          tablet: ProjectsGridView(childAspectRatio: .8),
+          desktop: ProjectsGridView(),
+        ),
+        const SizedBox(height: defaultPadding),
+        Center(
+          child: Text(
+            "Copyright©️2024 Giridharan S",
+            style: Theme.of(context).textTheme.titleMedium,
+          ),
+        ),
+        const SizedBox(height: defaultPadding),
       ],
     );
   }

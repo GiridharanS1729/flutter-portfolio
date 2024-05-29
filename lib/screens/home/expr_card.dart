@@ -22,15 +22,21 @@ class ExprCard extends StatelessWidget {
         children: [
           Text(
             expr.titel!,
-            style: Theme.of(context).textTheme.titleSmall,
+            style: Theme.of(context).textTheme.titleLarge,
           ),
-          Text(expr.company!),
-          const SizedBox(height: defaultPadding),
+          
           Text(
             expr.durs!,
             maxLines: 4,
             overflow: TextOverflow.ellipsis,
             style: TextStyle(height: 1.5),
+          ),
+          
+          const SizedBox(height: defaultPadding),
+          Text(
+            expr.company!,
+            style: Theme.of(context).textTheme.titleSmall?.copyWith(color: txtColor),
+            // color: txtColor,
           ),
         ],
       ),
