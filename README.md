@@ -1,5 +1,5 @@
 # Responsive Portfolio Website & App - Flutter 
-## check out the portfolio [here](https://responsive-portfolio-flutter.herokuapp.com/)
+## check out the portfolio [here](https://giris-flutter.netify.app/)
 
 **Packages we are using:**
 
