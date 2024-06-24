@@ -35,7 +35,7 @@ class Skills extends StatelessWidget {
             Expanded(
               child: AnimatedCircularProgressIndicator(
                 percentage: 0.75,
-                label: "React",
+                label: "ReactJs",
               ),
             ),
             SizedBox(
@@ -44,7 +44,7 @@ class Skills extends StatelessWidget {
             Expanded(
               child: AnimatedCircularProgressIndicator(
                 percentage: 0.55,
-                label: "Angular",
+                label: "AngularJs",
               ),
             ),
           ],
