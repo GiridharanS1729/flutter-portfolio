@@ -49,12 +49,12 @@ Make sure you have the following installed:
 1. **Clone the repo**
 
    ```sh
-   git clone https://github.com/GiridharanS1729/Portfolio.git
+   git clone https://github.com/GiridharanS1729/flutter-portfolio.git
 
 2. **Navigate to the project directory**
 
    ```sh
-   cd Portfolio
+   cd flutter-portfolio
 
 3. **Install dependencies**
 
