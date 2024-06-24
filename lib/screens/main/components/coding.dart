@@ -27,7 +27,7 @@ class Coding extends StatelessWidget {
         ),
         AnimatedLinearProgressIndicator(
           percentage: 0.70,
-          label: "React",
+          label: "ReactJs",
         ),
         AnimatedLinearProgressIndicator(
           percentage: 0.85,

@@ -3,6 +3,9 @@ import 'package:flutter_profile/constants.dart';
 import 'package:flutter_profile/screens/main/components/skills.dart';
 import 'package:flutter_svg/svg.dart';
 
+import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
+
 import 'area_info_text.dart';
 import 'coding.dart';
 import 'knowledges.dart';
@@ -49,7 +52,7 @@ class SideMenu extends StatelessWidget {
                       child: FittedBox(
                         child: Row(
                           children: [
-                            Text(
+                            Text( 
                               "DOWNLOAD CV",
                               style: TextStyle(
                                   color: Theme.of(context)
