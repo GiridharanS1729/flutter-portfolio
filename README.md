@@ -1,7 +1,8 @@
 # 🌟 Flutter Portfolio By Giridharan S🌟
 ### **[View My Website](https://giris-flutter.netlify.app/)**
 
-Welcome to the Flutter Portfolio project! This README will guide you through the steps to get your portfolio up and running. Follow along to showcase your skills and projects in a beautiful and interactive way.
+Welcome to the Flutter Portfolio project! <br/>
+This README will guide you through the steps to get your portfolio up and running. Follow along to showcase your skills and projects in a beautiful and interactive way.
 
 ![Portfolio Banner](images/banner.gif)
 
