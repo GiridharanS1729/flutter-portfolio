@@ -7,7 +7,7 @@ class Expr {
 final List<Expr> demoExperience = [
   Expr(
     titel: "Full-Stack Development",
-    company: "Auro Tech Solutions",
+    company: "Cognifyz Technologies",
     durs:
         "Jun 2024 - Jul 2024 · 2 mos          Remote",
   ),
