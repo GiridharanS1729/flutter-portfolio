@@ -34,11 +34,11 @@ class SideMenu extends StatelessWidget {
                     ),
                     AreaInfoText(
                       title: "City",
-                      text: "Dharmapuri",
+                      text: "Harur",
                     ),
                     AreaInfoText(
                       title: "Age",
-                      text: "19",
+                      text: "20",
                     ),
                     Skills(),
                     SizedBox(
