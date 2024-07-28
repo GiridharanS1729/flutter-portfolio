@@ -1,7 +1,13 @@
+import 'dart:io';
+import 'dart:typed_data';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_profile/constants.dart';
 import 'package:flutter_profile/screens/main/components/skills.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:open_file/open_file.dart';
+import 'package:path_provider/path_provider.dart';
 
 import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
@@ -15,6 +21,14 @@ class SideMenu extends StatelessWidget {
   const SideMenu({
     Key? key,
   }) : super(key: key);
+
+  Future<void> _downloadCV() async {
+    final ByteData data = await rootBundle.load('assets/GiridharanS.pdf');
+    final Directory tempDir = await getTemporaryDirectory();
+    final File tempFile = File('${tempDir.path}/GiridharanS.pdf');
+    await tempFile.writeAsBytes(data.buffer.asUint8List(), flush: true);
+    OpenFile.open(tempFile.path);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -48,19 +62,20 @@ class SideMenu extends StatelessWidget {
                     Knowledges(),
                     Divider(),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: _downloadCV,
                       child: FittedBox(
                         child: Row(
                           children: [
-                            Text( 
+                            Text(
                               "DOWNLOAD CV",
                               style: TextStyle(
-                                  color: Theme.of(context)
-                                      .textTheme
-                                      .bodyLarge!
-                                      .color),
+                                color: Theme.of(context)
+                                    .textTheme
+                                    .bodyLarge!
+                                    .color,
+                              ),
                             ),
-                            SizedBox(height: defaultPadding / 2),
+                            SizedBox(width: defaultPadding / 2),
                             SvgPicture.asset("assets/icons/download.svg"),
                           ],
                         ),
@@ -72,25 +87,57 @@ class SideMenu extends StatelessWidget {
                         children: [
                           Spacer(),
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () async {
+                              const url =
+                                  'https://www.linkedin.com/giridharans1729';
+                              if (await canLaunch(url)) {
+                                await launch(url);
+                              } else {
+                                throw 'Could not launch $url';
+                              }
+                            },
                             icon: SvgPicture.asset("assets/icons/linkedin.svg"),
                           ),
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () async {
+                              const url =
+                                  'https://www.github.com/GiridharanS1729';
+                              if (await canLaunch(url)) {
+                                await launch(url);
+                              } else {
+                                throw 'Could not launch $url';
+                              }
+                            },
                             icon: SvgPicture.asset("assets/icons/github.svg"),
                           ),
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () async {
+                              const url =
+                                  'https://www.twitter.com/Giridharans1729';
+                              if (await canLaunch(url)) {
+                                await launch(url);
+                              } else {
+                                throw 'Could not launch $url';
+                              }
+                            },
                             icon: SvgPicture.asset("assets/icons/twitter.svg"),
                           ),
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () async {
+                              const url =
+                                  'https://www.leetcode.com/giridharans1729';
+                              if (await canLaunch(url)) {
+                                await launch(url);
+                              } else {
+                                throw 'Could not launch $url';
+                              }
+                            },
                             icon: SvgPicture.asset("assets/icons/leetcode.svg"),
                           ),
                           Spacer(),
                         ],
                       ),
-                    ),
+                    )
                   ],
                 ),
               ),

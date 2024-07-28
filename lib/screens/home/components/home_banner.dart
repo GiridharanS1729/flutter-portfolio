@@ -1,7 +1,8 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_profile/responsive.dart';
-
+import 'package:url_launcher/link.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../../../constants.dart';
 
 class HomeBanner extends StatelessWidget {
@@ -47,16 +48,24 @@ class HomeBanner extends StatelessWidget {
                 SizedBox(height: defaultPadding),
                 if (!Responsive.isMobileLarge(context))
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed:
+                        null, 
                     style: TextButton.styleFrom(
                       padding: EdgeInsets.symmetric(
                           horizontal: defaultPadding * 2,
                           vertical: defaultPadding),
                       backgroundColor: primaryColor,
                     ),
-                    child: Text(
-                      "EXPLORE NOW",
-                      style: TextStyle(color: exp),
+                    child: Link(
+                      uri: Uri.parse('https://g-proj.vercel.app'),
+                      target: LinkTarget.self,
+                      builder: (context, followLink) => GestureDetector(
+                        onTap: followLink,
+                        child: Text(
+                          "EXPLORE NOW",
+                          style: TextStyle(color: exp),
+                        ),
+                      ),
                     ),
                   ),
               ],
