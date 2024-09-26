@@ -57,7 +57,7 @@ class HomeBanner extends StatelessWidget {
                       backgroundColor: primaryColor,
                     ),
                     child: Link(
-                      uri: Uri.parse('https://g-proj.vercel.app'),
+                      uri: Uri.parse('https://g.app'),
                       target: LinkTarget.self,
                       builder: (context, followLink) => GestureDetector(
                         onTap: followLink,
