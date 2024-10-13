@@ -6,6 +6,9 @@ This README will guide you through the steps to get your portfolio up and runnin
 
 ![Portfolio Banner](images/banner.gif)
 
+## Author
+**[Giridharan S](giridharans1729@gmail.com)**
+
 ## 🚀 Features
 
 - **Responsive Design**: Looks great on all devices 📱💻
