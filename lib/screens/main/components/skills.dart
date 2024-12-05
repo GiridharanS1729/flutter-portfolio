@@ -34,7 +34,7 @@ class Skills extends StatelessWidget {
             ),
             Expanded(
               child: AnimatedCircularProgressIndicator(
-                percentage: 0.70,
+                percentage: 0.90,
                 label: "ReactJs",
               ),
             ),
