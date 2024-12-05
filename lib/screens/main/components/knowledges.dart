@@ -36,6 +36,9 @@ class Knowledges extends StatelessWidget {
         KnowledgeText(
           text: "ReactJS,NodeJS",
         ),
+        KnowledgeText(
+          text: "Git,Github,Docker",
+        ),
       ],
     );
   }
